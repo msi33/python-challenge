@@ -33,14 +33,23 @@ with open(election_file_path) as election_file:
         if candidate not in candidates:
             candidates.append(candidate) # add to list if they haven't been added
             candidate_vote.append(1) # add the first vote
-        #else:
-            # do nothing    
+        else: # candidate is in list 
+            candidate_id = candidates.index(candidate)
+            candidate_vote[candidate_id] += 1   
 
 # print the result to screen
 print('Election Results')
 print('-------------------------')
 print(f'Total Votes: {total_vote}')
 print('-------------------------')
+
+for candidate in candidates:
+    print(f'{candidate}: 23.049% ({candidate_vote[candidate.index(candidate)]})')
+
+
+# Diana DeGette: 73.812% (272892)
+# Raymon Anthony Doane: 3.139% (11606)
+
 
 print(len(candidates), "Candidates")
 print(candidates, "Candidates")
