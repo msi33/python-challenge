@@ -44,7 +44,9 @@ print(f'Total Votes: {total_vote}')
 print('-------------------------')
 
 for candidate in candidates:
-    print(f'{candidate}: 23.049% ({candidate_vote[candidate.index(candidate)]})')
+    current_candidate_vote = candidate_vote[candidate.index(candidate)]
+    current_vote_pct = (current_candidate_vote/total_vote) * 100
+    print(f'{candidate}: {current_vote_pct}% ({candidate_vote})')
 
 
 # Diana DeGette: 73.812% (272892)
