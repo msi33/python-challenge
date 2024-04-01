@@ -5,9 +5,23 @@
 # 4. The total number of votes each candidate won
 # 5. The winner of the election based on popular vote
 
+#### start here
+# create variables
+# open the file
+import csv
+file_path = "PyPoll/Resources/election_data.csv" # use 
+
+# with open(file_path) as text:
+#     csv_file = csv.reader(text)
+
+# read a row in the file
+# add to total votes
+# print the result to screen
+# print the result to file
 
 
 
+### end here
 
 # Example Output
 # Election Results
