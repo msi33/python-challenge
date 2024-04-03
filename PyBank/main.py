@@ -24,7 +24,9 @@ with open(budget_file_path) as budget_file:
         total_months+= 1
 
 # print the results to screen
-print(total_months)
+print("Financial Analysis")
+print("----------------------------")
+print(f"Total Months: {total_months}")
 # print the results to file
 
 
