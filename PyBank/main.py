@@ -1,6 +1,6 @@
 
 # Needed 
-# 1. The total number of months included in the dataset
+# 1. The total number of months included in the dataset -done *
 # 2. The net total amount of "Profit/Losses" over the entire period
 # 3. The changes in "Profit/Losses" over the entire period, and then the average of those changes
 # 4. The greatest increase in profits (date and amount) over the entire period
@@ -18,10 +18,17 @@ total_months = 0
 with open(budget_file_path) as budget_file:
     csv_file = csv.reader(budget_file)
     next(csv_file) # skips a row in the file (first row =header row)
-#     # read a row in the file
+     # read a row in the file
     for row in csv_file:
         # add to total months
         total_months+= 1
+        # "Date,Profit/Losses"
+        Date = row[0]
+        Profit_Losses = row[1]
+        
+
+
+
 
 # print the results to screen
 print("Financial Analysis")
