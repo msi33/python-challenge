@@ -14,6 +14,7 @@ import csv
 # open the file
 budget_file_path = "PyBank/Resources/budget_data.csv"
 total_months = 0
+total_amount = 0
 
 with open(budget_file_path) as budget_file:
     csv_file = csv.reader(budget_file)
@@ -22,10 +23,10 @@ with open(budget_file_path) as budget_file:
     for row in csv_file:
         # add to total months
         total_months+= 1
-        # "Date,Profit/Losses"
-        Date = row[0]
-        Profit_Losses = row[1]
-        
+        total_amount+=int(row[1])
+     
+
+
 
 
 
@@ -33,6 +34,7 @@ with open(budget_file_path) as budget_file:
 # print the results to screen
 print("Financial Analysis")
 print("----------------------------")
+print(f"Total: ${total_amount}")
 print(f"Total Months: {total_months}")
 # print the results to file
 
@@ -50,3 +52,7 @@ print(f"Total Months: {total_months}")
 # Average Change: $-8311.11
 # Greatest Increase in Profits: Aug-16 ($1862002)
 # Greatest Decrease in Profits: Feb-14 ($-1825558)
+
+# Determine poverty rate to 2 decimal places, convert to string
+        # percent = round(int(row[8]) / int(row[1]) * 100, 2)
+        # poverty_rate.append(str(percent) + "%")
