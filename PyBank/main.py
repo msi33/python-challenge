@@ -13,16 +13,18 @@ import csv
 # create variables
 # open the file
 budget_file_path = "PyBank/Resources/budget_data.csv"
+total_months = 0
 
-print("project works")
-# total_votes = 0
-# candidates = []
-# candidate_votes = []
+with open(budget_file_path) as budget_file:
+    csv_file = csv.reader(budget_file)
+    next(csv_file) # skips a row in the file (first row =header row)
+#     # read a row in the file
+    for row in csv_file:
+        # add to total months
+        total_months+= 1
 
-
-# read a row in the file
-# add to total months
 # print the results to screen
+print(total_months)
 # print the results to file
 
 
