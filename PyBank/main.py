@@ -7,9 +7,27 @@
 # 5. The greatest decrease in profits (date and amount) over the entire period
 
 
+### start here
+import csv
+
+# create variables
+# open the file
+budget_file_path = "PyBank/Resources/budget_data.csv"
+
+print("project works")
+# total_votes = 0
+# candidates = []
+# candidate_votes = []
+
+
+# read a row in the file
+# add to total months
+# print the results to screen
+# print the results to file
 
 
 
+### end here
 
 
 # example output
