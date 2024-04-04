@@ -15,6 +15,9 @@ import csv
 budget_file_path = "PyBank/Resources/budget_data.csv"
 total_months = 0
 total_income = 0
+previous_income = 0
+month_of_change = []
+income_change = 0
 
 with open(budget_file_path) as budget_file:
     csv_file = csv.reader(budget_file)
@@ -27,7 +30,19 @@ with open(budget_file_path) as budget_file:
          #Calculate the total income
         total_income += int(row[1])
 
-    print(total_income)
+    #print(total_income)
+        # estimate the average change in incomes between months over the entire period
+        income_change = float(row[1]) - previous_income
+        previous_income = float(row[1])
+        income_change +=  income_change
+        month_of_change+= row[1]
+    print(income_change)
+
+    #Calculate the average change in revenue between months over the entire period
+        # revenue_change = float(row["Profit/Losses"])- previous_revenue
+        # previous_revenue = float(row["Profit/Losses"])
+        # revenue_change_list = revenue_change_list + [revenue_change]
+        # month_of_change = [month_of_change] + [row["Date"]]
 
 
        # total_amount+=int(row[1])
