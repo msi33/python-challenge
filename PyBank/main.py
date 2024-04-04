@@ -18,6 +18,14 @@ total_income = 0
 previous_income = 0
 month_of_change = []
 income_change = 0
+income_change_list = []
+greatest_increase = ["", 0]
+greatest_decrease = ["",9999999]
+income_average = 0
+# greatest_decrease = ["", 9999999]
+# greatest_increase = ["", 0]
+# revenue_change_list = []
+# revenue_average = 0
 
 with open(budget_file_path) as budget_file:
     csv_file = csv.reader(budget_file)
@@ -35,14 +43,29 @@ with open(budget_file_path) as budget_file:
         income_change = float(row[1]) - previous_income
         previous_income = float(row[1])
         income_change +=  income_change
-        month_of_change+= row[1]
-    print(income_change)
+        month_of_change+= row[0]
+        income_change_list = income_change_list + [income_change]
+        print(income_change_list)
+        
 
-    #Calculate the average change in revenue between months over the entire period
-        # revenue_change = float(row["Profit/Losses"])- previous_revenue
-        # previous_revenue = float(row["Profit/Losses"])
+
+        
         # revenue_change_list = revenue_change_list + [revenue_change]
         # month_of_change = [month_of_change] + [row["Date"]]
+
+
+
+        
+    #print(income_change)
+
+    # greatest increase in income over the entire period
+    if income_change > greatest_increase[1]:
+            greatest_increase[1] = income_change[1]
+            greatest_increase[0] = row[0]
+
+    #print(greatest_increase)
+
+
 
 
        # total_amount+=int(row[1])
