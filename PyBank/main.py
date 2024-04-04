@@ -14,7 +14,7 @@ import csv
 # open the file
 budget_file_path = "PyBank/Resources/budget_data.csv"
 total_months = 0
-total_amount = 0
+total_income = 0
 
 with open(budget_file_path) as budget_file:
     csv_file = csv.reader(budget_file)
@@ -23,7 +23,16 @@ with open(budget_file_path) as budget_file:
     for row in csv_file:
         # add to total months
         total_months+= 1
-        total_amount+=int(row[1])
+
+         #Calculate the total income
+        total_income += int(row[1])
+
+    print(total_income)
+
+
+       # total_amount+=int(row[1])
+      #  average = total_amount/total_months
+
      
 
 
@@ -32,10 +41,11 @@ with open(budget_file_path) as budget_file:
 
 
 # print the results to screen
-print("Financial Analysis")
-print("----------------------------")
-print(f"Total: ${total_amount}")
-print(f"Total Months: {total_months}")
+# print("Financial Analysis")
+# print("----------------------------")
+# print(f"Total: ${total_amount}")
+# print(f"Total Months: {total_months}")
+# print(f"Average Change: $-{average}")
 # print the results to file
 
 
