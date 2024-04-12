@@ -62,9 +62,14 @@ with open(budget_file_path) as budget_file:
         greatest_increase = max(profit_loss)
         greatest_index = profit_loss.index(greatest_increase)
         greatest_date = dates[greatest_index]
-        print(greatest_date)
         
+        #print(greatest_increase,greatest_date)
 
+        # Greatest decrease in profit_losses
+        greatest_decrease = min(profit_loss)
+        loss_index = profit_loss.index(greatest_decrease)
+        loss_date = dates[loss_index]
+        print(greatest_decrease,loss_date)
         
 
 
