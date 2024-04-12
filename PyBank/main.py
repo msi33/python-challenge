@@ -70,6 +70,11 @@ with open(budget_file_path) as budget_file:
         loss_index = profit_loss.index(greatest_decrease)
         loss_date = dates[loss_index]
         print(greatest_decrease,loss_date)
+
+
+    # Average change in profit/losses between months over entire period
+    average_change = sum(profit_loss)/len(profit_loss)
+    print(average_change)
         
 
 
