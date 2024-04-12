@@ -30,10 +30,10 @@ with open(budget_file_path) as budget_file:
         total_income += int(row[1])
         date = row[0]
         dates.append(row[0]) # also date above can be used
-        print(dates)
+        #clprint(dates)
 
         previous_income = int(row[1])
-        print(previous_income)
+        #print(previous_income)
         
         # calculate the change in income
         income_change = total_income - previous_income
@@ -41,7 +41,7 @@ with open(budget_file_path) as budget_file:
         
         #print(total_income,previous_income, income_change, profit_loss)
         # Total net amount of profit/losses over entire period
-        print(profit_loss)
+       # print(profit_loss)
 
 
         # Greatest increase in profit
