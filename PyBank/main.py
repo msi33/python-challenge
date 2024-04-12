@@ -75,8 +75,16 @@ with open(budget_file_path) as budget_file:
     # Average change in profit/losses between months over entire period
     average_change = sum(profit_loss)/len(profit_loss)
     print(average_change)
+    print(profit_loss)
         
-
+# print the results to screen
+print("Financial Analysis")
+print("----------------------------")
+print(f"Total Months: {total_months}")
+print(f"Total: ${total_income}")
+# print(f"Total Months: {total_months}")
+# print(f"Average Change: $-{average}")
+# print the results to file
 
 
 
